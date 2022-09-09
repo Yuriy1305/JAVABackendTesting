@@ -57,8 +57,8 @@ public class ProductsTest {
         Response<Product> response = productService.getProductById(1).execute();
         assertThat(response.body().getTitle(),
                 anyOf(containsString("Новой продукт"), containsString("Milk")));
-//        System.out.println("Было getProductById-"+response+"\n"+response.body().getId()+"\t"+
-//           response.body().getTitle()+"\t"+response.body().getCategoryTitle()+"\t"+response.body().getPrice());
+        System.out.println("Было getProductById-"+response+"\n"+response.body().getId()+"\t"+
+           response.body().getTitle()+"\t"+response.body().getCategoryTitle()+"\t"+response.body().getPrice());
     }
     @Test
     void getProducts() throws IOException {
